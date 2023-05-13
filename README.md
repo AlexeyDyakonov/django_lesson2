@@ -27,26 +27,29 @@
 
 Для корректной работы программы вам необходимо создать файл .env и записать в него следующие переменные:
 
-HOST - Хост базы данных;
-PORT - Порт базы данных;
-NAME - Имя базы данных;
-USER - Логин от базы данных;
-PASSWORD - Пароль от базы данных;
-SECRET_KEY - Секретный ключ;
-LANGUAGE_CODE - язык;
-TIME_ZONE - часовой пояс;
-DEBUG - Режим отладки. По стандарту - True;
-ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
+-HOST - Хост базы данных;
+-PORT - Порт базы данных;
+-NAME - Имя базы данных;
+-USER - Логин от базы данных;
+-PASSWORD - Пароль от базы данных;
+-SECRET_KEY - Секретный ключ;
+-LANGUAGE_CODE - язык;
+-TIME_ZONE - часовой пояс;
+-DEBUG - Режим отладки. По стандарту - True;
+-ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
+
 Пример .env:
 
-export DB_HOST=checkpoint.devman.org
-export DB_PORT=5434
-export DB_NAME=checkpoint
-export DB_USER=guard
-export DB_PASSWORD=osim5
-export SECRET_KEY=REPLACE_ME
-export DEBUG=false
-export ALLOWED_HOSTS=*
+-export HOST=checkpoint.devman.org;
+-export PORT=5434;
+-export NAME=checkpoint;
+-export USER=guard;
+-export PASSWORD=osim5;
+-export SECRET_KEY=REPLACE_ME;
+-export LANGUAGE_CODE=ru-ru;
+-export TIME_ZONE=Europe/Moscow;
+-export DEBUG=false;
+-export ALLOWED_HOSTS=*.
 
 Python3 должен быть уже установлен. 
 Затем используйте `pip` (или `pip3`, есть конфликт с Python2) для установки зависимостей:
