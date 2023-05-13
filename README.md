@@ -40,16 +40,16 @@
 
 Пример .env:
 
--export HOST=checkpoint.devman.org;
--export PORT=5434;
--export NAME=checkpoint;
--export USER=guard;
--export PASSWORD=osim5;
--export SECRET_KEY=REPLACE_ME;
--export LANGUAGE_CODE=ru-ru;
--export TIME_ZONE=Europe/Moscow;
--export DEBUG=false;
--export ALLOWED_HOSTS=*.
+- export HOST=checkpoint.devman.org;
+- export PORT=5434;
+- export NAME=checkpoint;
+- export USER=guard;
+- export PASSWORD=osim5;
+- export SECRET_KEY=REPLACE_ME;
+- export LANGUAGE_CODE=ru-ru;
+- export TIME_ZONE=Europe/Moscow;
+- export DEBUG=false;
+- export ALLOWED_HOSTS=*.
 
 Python3 должен быть уже установлен. 
 Затем используйте `pip` (или `pip3`, есть конфликт с Python2) для установки зависимостей:
