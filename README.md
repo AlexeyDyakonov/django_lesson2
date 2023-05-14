@@ -31,17 +31,18 @@
 - DB_NAME - Имя базы данных;
 - DB_USER - Логин от базы данных;
 - DB_PASSWORD - Пароль от базы данных;
-- DB_SECRET_KEY - Секретный ключ. По стандарту - REPLACE_ME;
-- DB_DEBUG - Режим отладки. По стандарту - True;
-- DB_ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
+ Ключи для окружения:
+- SECRET_KEY - Секретный ключ. По стандарту - REPLACE_ME;
+- DEBUG - Режим отладки. По стандарту - True;
+- ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
 
 Пример .env:
 
-- export HOST=checkpoint.devman.org
-- export PORT=5434
-- export NAME=checkpoint
-- export USER=guard
-- export PASSWORD=osim5
+- export DB_HOST=checkpoint.devman.org
+- export DB_PORT=5434
+- export DB_NAME=checkpoint
+- export DB_USER=guard
+- export DB_PASSWORD=osim5
 - export SECRET_KEY=REPLACE_ME
 - export DEBUG=false
 - export ALLOWED_HOSTS=*
