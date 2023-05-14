@@ -5,11 +5,11 @@ from environs import Env
 env = Env()
 env.read_env()
 
-DB_HOST = env.str('HOST')
-DB_PORT = env.str('PORT')
-DB_NAME = env.str('NAME')
-DB_USER = env.str('USER')
-DB_PASSWORD = env.str('PASSWORD')
+DB_HOST = env.str('DB_HOST')
+DB_PORT = env.str('DB_PORT')
+DB_NAME = env.str('DB_NAME')
+DB_USER = env.str('DB_USER')
+DB_PASSWORD = env.str('DB_PASSWORD')
 
 DATABASES = {
     'default': {
