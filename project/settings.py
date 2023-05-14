@@ -5,37 +5,32 @@ from environs import Env
 env = Env()
 env.read_env()
 
-HOST = env.str('HOST')
-PORT = env.str('PORT')
-NAME = env.str('NAME')
-USER = env.str('USER')
-PASSWORD = env.str('PASSWORD')
-SECRET_KEY_BD = env.str('SECRET_KEY')
-LANGUAGE_CODE_BD = env.str('LANGUAGE_CODE')
-TIME_ZONE_BD = env.str('TIME_ZONE')
-debug = env.bool('DEBUG', False)
-allowed_hosts = env.list("ALLOWED_HOSTS", ["localhost:8000"])
+DB_HOST = env.str('HOST')
+DB_PORT = env.str('PORT')
+DB_NAME = env.str('NAME')
+DB_USER = env.str('USER')
+DB_PASSWORD = env.str('PASSWORD')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': HOST,
-        'PORT': PORT,
-        'NAME': NAME,
-        'USER': USER,
-        'PASSWORD': PASSWORD
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD
     }
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = SECRET_KEY_BD
+SECRET_KEY = env.str('SECRET_KEY')
 
-DEBUG = debug
+DEBUG = env.bool('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = allowed_hosts
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ["localhost:8000"])
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,9 +45,9 @@ TEMPLATES = [
 
 USE_L10N = True
 
-LANGUAGE_CODE = LANGUAGE_CODE_BD
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = TIME_ZONE_BD
+TIME_ZONE = 'Europe/Moscow'
 
 USE_TZ = True
 
