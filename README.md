@@ -25,18 +25,15 @@
 
 ### Как установить
 
-Для корректной работы программы вам необходимо создать файл .env и записать в него следующие переменные:
-
-- HOST - Хост базы данных;
-- PORT - Порт базы данных;
-- NAME - Имя базы данных;
-- USER - Логин от базы данных;
-- PASSWORD - Пароль от базы данных;
-- SECRET_KEY - Секретный ключ;
-- LANGUAGE_CODE - язык;
-- TIME_ZONE - часовой пояс;
-- DEBUG - Режим отладки. По стандарту - True;
-- ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
+Для корректной работы программы вам необходимо создать файл .env и записать в него следующие переменные окружения.
+- DB_HOST - Хост базы данных;
+- DB_PORT - Порт базы данных;
+- DB_NAME - Имя базы данных;
+- DB_USER - Логин от базы данных;
+- DB_PASSWORD - Пароль от базы данных;
+- DB_SECRET_KEY - Секретный ключ. По стандарту - REPLACE_ME;
+- DB_DEBUG - Режим отладки. По стандарту - True;
+- DB_ALLOWED_HOSTS - Допустимые хосты. По стандарту - *.
 
 Пример .env:
 
@@ -46,8 +43,6 @@
 - export USER=guard
 - export PASSWORD=osim5
 - export SECRET_KEY=REPLACE_ME
-- export LANGUAGE_CODE=ru-ru
-- export TIME_ZONE=Europe/Moscow
 - export DEBUG=false
 - export ALLOWED_HOSTS=*
 
